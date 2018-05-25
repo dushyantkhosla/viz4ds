@@ -6,6 +6,7 @@ conda create -y -n dataviz python=3.6
 conda activate dataviz
 conda install -y -c conda-forge jupyterlab \
                                 altair \
+                                vega_datasets \
                                 seaborn \
                                 bqplot \
                                 ipywidgets \
