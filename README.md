@@ -1,4 +1,17 @@
-# Install Dependencies
+## Interactive Data Visualization
+
+This repo has tools and examples showing how to create Interactive Data Visualizations in Python using
+
+- pandas
+- seaborn
+- altair
+- bqplot
+- ... and more
+
+## Dependencies
+
+- Use the `/docker` folder to create a container, or 
+- Use a Conda env
 
 ```bash
 conda remove -y -n dataviz --all
