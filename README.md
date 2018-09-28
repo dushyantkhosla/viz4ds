@@ -32,6 +32,4 @@ jupyter labextension install bqplot
 
 ## References
 
-- [Anatomy of a matplotlib figure](https://matplotlib.org/gallery/showcase/anatomy.html), [Video](https://www.youtube.com/watch?v=rARMKS8jE9g)
-- 
-- [Advanced Plots in mpl](http://www.blackarbs.com/blog/advanced-time-series-plots-in-python/1/6/2017)
+- [Anatomy of a matplotlib figure](https://matplotlib.org/gallery/showcase/anatomy.html), [Video](https://www.youtube.com/watch?v=rARMKS8jE9g),[Advanced Plots in mpl](http://www.blackarbs.com/blog/advanced-time-series-plots-in-python/1/6/2017)
