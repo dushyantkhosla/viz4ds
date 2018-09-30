@@ -1,0 +1,20 @@
+environment:
+  matrix:
+    - PY: "3.6"
+      PYTHON: "C:\\Python36-x64"
+      CONDA: "C:\\Miniconda36-x64"
+
+install:
+  - "SET PATH=%CONDA%;%CONDA%\\Scripts;%PATH%"
+  - "conda config --set always_yes yes --set changeps1 no"
+  - "conda update conda"
+  - "conda env create"
+  - "activate pyviz"
+  - "conda env export"
+  - "conda list"
+
+build: off
+
+test_script:
+  - "ren data\\nyc_taxi_50k.parq nyc_taxi_wide.parq"
+  - "python etc\\test_notebooks.py"
