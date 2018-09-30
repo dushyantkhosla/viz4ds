@@ -1,6 +1,0 @@
-[build-system]
-requires = [
-    "param >=1.7.0",
-    "setuptools >=30.3.0",
-    "numpy"
-]
