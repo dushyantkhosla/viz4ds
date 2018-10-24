@@ -1,0 +1,32 @@
+# ''' #
+# Makes an Altair chart from the JSON specification and an ID #
+# The ID should be the same as the a element #
+# ''' #
+{% macro make_altair(id, chart_as_json) -%}
+  <script type="text/javascript">
+    var spec = {{ chart_as_json | tojson | safe }};
+    var embed_opt = {"mode": "vega-lite"};
+
+    function showError(el, error){
+        el.innerHTML = ('<div class="error">'
+                        + '<p>JavaScript Error: ' + error.message + '</p>'
+                        + "<p>This usually means there's a typo in your chart specification. "
+                        + "See the javascript console for the full traceback.</p>"
+                        + '</div>');
+        throw error;
+    }
+    vegaEmbed("#{{ id }}", spec, embed_opt)
+      .catch(error => showError(document.getElementById('{{ id }}'), error));
+  </script>
+{%- endmacro %}
+
+# ''' #
+# Builds an empty div element (to hold the Altair chart)
+# ''' #
+{% macro make_div(id, class, content='') -%}
+  <div id="{{ id }}" class="{{ class }}">
+      {% if content -%}
+        {{ content }}
+      {%- endif %}
+  </div>
+{%- endmacro %}

@@ -1,0 +1,9 @@
+{% import 'macros.html' as macros %}
+{% extends 'layout.html' %}
+
+{% block content %}
+  {% for unit in payload %}
+    {{ macros.make_div(id=unit['div_id'], class=unit['div_class'], content=unit['div_content']) }}
+    {{ macros.make_altair(id=unit['div_id'], chart_as_json=unit['chart_as_json']) }}
+  {% endfor %}
+{% endblock %}
