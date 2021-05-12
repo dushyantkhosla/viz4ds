@@ -10,6 +10,6 @@
   "license": "MIT",
   "dependencies": {
     "reveal-md": "0.0.32",
-    "reveal.js": "^3.7.0"
+    "reveal.js": "^3.9.2"
   }
 }
